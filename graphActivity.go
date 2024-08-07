@@ -101,7 +101,7 @@ func DeleteGraph(w http.ResponseWriter, r *http.Request) {
 
 	if _, exists := graphs[strconv.Itoa(graphDeleteRequest.ID)]; exists {
 		delete(graphs, strconv.Itoa(graphDeleteRequest.ID))
-		w.WriteHeader(http.StatusNoContent)
+		json.NewEncoder(w).Encode(map[string][]int{"deleted Graph ID": {graphDeleteRequest.ID}})
 	} else {
 		http.Error(w, "Graph not found", http.StatusNotFound)
 	}
@@ -134,7 +134,7 @@ func GetShortestPath(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(map[string][]int{"path": path})
+	json.NewEncoder(w).Encode(map[string][]int{"Shortest path": path})
 	return
 }
 
