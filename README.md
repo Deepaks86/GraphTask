@@ -1,6 +1,6 @@
 #Implementation: 
 Given an unweighted, undirected graph of N nodes and E edges, a source node S, and a destination node D, we need to find the shortest path from node S to node D in the graph.
- 
+  
 For this BFS algorithm is used and implemented in Golang.
 
 #Requirements:
@@ -11,6 +11,7 @@ For this BFS algorithm is used and implemented in Golang.
 #Running & Testing
 1.	Clone the repository to your local using
 git clone https://github.com/Deepaks86/GraphTask.git
+
 Files: 
 graphActivity.go : BFS implementation
 graphActivity_test.go: Test cases
